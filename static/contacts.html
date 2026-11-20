@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakty – Bar Rébus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="assets/logo.svg" alt="logo" /></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">Domů</a></li>
+                <li><a href="/menu.html">Menu</a></li>
+                <li><a href="/pool.html">Kulečník</a></li>
+                <li><a href="/contacts.html" class="active">Kontakty</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="page-hero">
+            <h1>Kontakty</h1>
+            <span>Najdete nás v srdci Prahy. Rezervace vítány.</span>
+        </div>
+
+        <div class="contacts-page">
+            <div class="contacts-info">
+                <div class="info-block">
+                    <h2>Adresa</h2>
+                    <ul>
+                        <li>Ulice 1</li>
+                        <li>110 00 Praha 1</li>
+                        <li><a href="https://maps.app.goo.gl/SmJgUfBXRY7JfpqL7">Zobrazit na mapě →</a></li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h2>Spojení</h2>
+                    <ul>
+                        <li><a href="tel:+420111222333">+420 111 222 333</a></li>
+                        <li><a href="mailto:info@rebus.cz">info@rebus.cz</a></li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h2>Otevírací doba</h2>
+                    <ul>
+                        <li>Po – Čt: 17:00 – 23:00</li>
+                        <li>Pá – So: 16:00 – 01:00</li>
+                        <li>Ne (svátky): 18:00 – 22:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contacts-form-wrap">
+                <h2>Napište nám</h2>
+                <p>Rezervace stolu, soukromé akce nebo jen dotaz – ozvěte se.</p>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Jméno</label>
+                            <input type="text" id="name" name="name" placeholder="Jan Novák" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="jannovak@email.cz" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Předmět</label>
+                        <input type="text" id="subject" name="subject" placeholder="např. Rezervace stolu" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Zpráva</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Vaše zpráva..." required></textarea>
+                    </div>
+                    <button type="submit">Odeslat zprávu</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="pages">
+            <span>Stránky</span>
+            <ul>
+                <li><a href="/">domů</a></li>
+                <li><a href="/menu.html">menu</a></li>
+                <li><a href="/pool.html">kulečník</a></li>
+                <li><a href="/contacts.html">kontakty</a></li>
+            </ul>
+        </div>
+        <div class="contacts">
+            <span>Kontakty</span>
+            <ul>
+                <li>email: <a href="mailto:info@rebus.cz">info@rebus.cz</a></li>
+                <li>tel: <a href="tel:+420111222333">+420 111 222 333</a></li>
+                <li>adresa: <a href="https://maps.app.goo.gl/SmJgUfBXRY7JfpqL7">Ulice 1, Praha</a></li>
+            </ul>
+        </div>
+        <div class="open-hours">
+            <span>Otevírací doba</span>
+            <ul>
+                <li>Po - Čt: 17:00 - 23:00</li>
+                <li>Pá - So: 16:00 - 01:00</li>
+                <li>Ne (svátky): 18:00 - 22:00</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

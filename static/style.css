@@ -1,0 +1,683 @@
+/* Fonts loaded via <link> in HTML */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #c9a84c;
+    --gold-light: #e2c47a;
+    --bg: #161616;
+    --bg-section: #1e1e1e;
+    --bg-alt: #252525;
+    --text: #f0ede8;
+    --text-muted: #9a9a8e;
+    --header-bg: #0d0d0d;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo img {
+    height: 48px;
+    width: auto;
+    max-width: none;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+header .menu ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+header .menu ul li a:hover {
+    color: var(--gold);
+}
+
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: var(--bg-section);
+}
+
+.hero {
+    padding: 100px 60px;
+    text-align: center;
+    background: linear-gradient(160deg, #0d0d0d 0%, #1a1410 60%, #1e1a10 100%);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hero span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    position: relative;
+}
+
+.coctails,
+.pool {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 360px;
+}
+
+.coctails .img,
+.pool .img {
+    overflow: hidden;
+}
+
+.coctails .img img,
+.pool .img img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.coctails:hover .img img,
+.pool:hover .img img {
+    transform: scale(1.04);
+}
+
+.coctails .content,
+.pool .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 56px 52px;
+    background: var(--bg-alt);
+}
+
+.coctails {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.pool {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.coctails .content h2,
+.pool .content h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.coctails .content p,
+.pool .content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.coctails .content a,
+.pool .content a {
+    display: inline-block;
+    padding: 11px 28px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    align-self: flex-start;
+}
+
+.coctails .content a:hover,
+.pool .content a:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+.reservations {
+    padding: 80px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, #1a1410 0%, #0d0d0d 100%);
+}
+
+.reservations h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.reservations p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservations a {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--gold);
+    color: #111;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+}
+
+.reservations a:hover {
+    background: var(--gold-light);
+}
+
+footer {
+    background: var(--header-bg);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 56px 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+footer div span {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer ul li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+footer ul li a {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+footer ul li a:hover {
+    color: var(--gold);
+}
+
+header .menu ul li a.active {
+    color: var(--gold);
+}
+
+.page-hero {
+    padding: 64px 60px;
+    text-align: center;
+    background: linear-gradient(160deg, #0d0d0d 0%, #1a1410 60%, #1e1a10 100%);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.page-hero h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+}
+
+.page-hero span {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.menu-page {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    background: var(--bg-alt);
+}
+
+.menu-category h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item-name > span:first-child {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.menu-item-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.menu-item-price {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.pool-pricing {
+    padding: 60px;
+    background: var(--bg-section);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pool-pricing h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 36px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 640px;
+    margin: 0 auto 24px;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 28px 20px;
+    background: var(--bg-alt);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.pricing-card {
+    border-color: rgba(201, 168, 76, 0.4);
+    background: rgba(201, 168, 76, 0.05);
+}
+
+.pricing-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.pricing-price {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.pricing-card .pricing-note {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.pricing-note-global {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.pool-rules {
+    padding: 60px;
+    background: var(--bg-alt);
+}
+
+.pool-rules h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 24px;
+}
+
+.rules-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 640px;
+}
+
+.rules-list li {
+    padding-left: 20px;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.rules-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.contacts-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: var(--bg-alt);
+}
+
+.contacts-info {
+    padding: 60px 48px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.info-block h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+}
+
+.info-block ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-block ul li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.info-block ul li a {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.info-block ul li a:hover {
+    color: var(--gold);
+}
+
+.contacts-form-wrap {
+    padding: 60px 60px 60px 48px;
+}
+
+.contacts-form-wrap h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.contacts-form-wrap > p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+    background: var(--bg-section);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(154, 154, 142, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(201, 168, 76, 0.5);
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 13px 32px;
+    background: var(--gold);
+    color: #111;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: var(--gold-light);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    header .menu ul {
+        gap: 20px;
+    }
+
+    .coctails,
+    .pool {
+        grid-template-columns: 1fr;
+    }
+
+    .pool .content {
+        order: -1;
+    }
+
+    .coctails .img,
+    .pool .img {
+        height: 240px;
+    }
+
+    .coctails .content,
+    .pool .content {
+        padding: 40px 32px;
+    }
+
+    .hero {
+        padding: 72px 32px;
+    }
+
+    .reservations {
+        padding: 60px 32px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 24px;
+    }
+
+    .page-hero {
+        padding: 48px 24px;
+    }
+
+    .menu-page {
+        padding: 40px 24px;
+    }
+
+    .pool-pricing {
+        padding: 40px 24px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+
+    .pool-rules {
+        padding: 40px 24px;
+    }
+
+    .contacts-page {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-info {
+        padding: 40px 24px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .contacts-form-wrap {
+        padding: 40px 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
