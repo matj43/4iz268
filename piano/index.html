@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-4.1.0.min.js" integrity="sha256-hjRvPkFLO1JGZFMXGrzdpG6TlsHDyjp4PQeqLWRcMzk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="notes">
+            <div id="c-line" class="line cline"></div>
+            <div id="d-line" class="line dline"></div>
+            <div id="e-line" class="line eline bar"></div>
+            <div id="f-line" class="line fline"></div>
+            <div id="g-line" class="line gline bar"></div>
+            <div id="a-line" class="line aline"></div>
+            <div id="h-line" class="line hline bar"></div>
+            <div id="c-line-1" class="line cline"></div>
+            <div id="d-line-1" class="line dline bar"></div>
+            <div id="e-line-1" class="line eline"></div>
+            <div id="f-line-1" class="line fline bar"></div>
+            <div id="g-line-1" class="line gline"></div>
+        </div>
+        <div class="piano">
+            <div class="black">
+                <div id="csharp" class="tile black-tile">
+                    <img src="assets/tiles/black_1.svg" />
+                    <span class="note">C#</span>
+                    <span class="key">E</span>
+                </div>
+                <div id="dsharp" class="tile black-tile">
+                    <img src="assets/tiles/black_1.svg" />
+                    <span class="note">D#</span>
+                    <span class="key">R</span>
+                </div>
+                <div id="fsharp" class="tile black-tile">
+                    <img src="assets/tiles/black_1.svg" />
+                    <span class="note">F#</span>
+                    <span class="key">Y</span>
+                </div>
+                <div id="gsharp" class="tile black-tile">
+                    <img src="assets/tiles/black_1.svg" />
+                    <span class="note">G#</span>
+                    <span class="key">U</span>
+                </div>
+                <div id="asharp" class="tile black-tile">
+                    <img src="assets/tiles/black_1.svg" />
+                    <span class="note">A#</span>
+                    <span class="key">I</span>
+                </div>
+            </div>
+            <div class="white">
+                <div id="c" class="tile white-tile">
+                    <img src="assets/tiles/white_1.svg" />
+                    <span class="note">C</span>
+                    <span class="key">S</span>
+                </div>
+                <div id="d" class="tile white-tile">
+                    <img src="assets/tiles/white_2.svg" />
+                    <span class="note">D</span>
+                    <span class="key">D</span>
+                </div>
+                <div id="e" class="tile white-tile">
+                    <img src="assets/tiles/white_3.svg" />
+                    <span class="note">E</span>
+                    <span class="key">F</span>
+                </div>
+                <div id="f" class="tile white-tile">
+                    <img src="assets/tiles/white_1.svg" />
+                    <span class="note">F</span>
+                    <span class="key">G</span>
+                </div>
+                <div id="g" class="tile white-tile">
+                    <img src="assets/tiles/white_2.svg" />
+                    <span class="note">G</span>
+                    <span class="key">H</span>
+                </div>
+                <div id="a" class="tile white-tile">
+                    <img src="assets/tiles/white_2.svg" />
+                    <span class="note">A</span>
+                    <span class="key">J</span>
+                </div>
+                <div id="h" class="tile white-tile">
+                    <img src="assets/tiles/white_3.svg" />
+                    <span class="note">H</span>
+                    <span class="key">K</span>
+                </div>
+            </div>
+        </div>
+        <div id="songs" class="songs">
+            <button id="reset">Reset</button>
+            <button id="resetProgress">Reset Progress ❌</button>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

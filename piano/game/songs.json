@@ -1,0 +1,19 @@
+{
+    "songs" : [
+        {
+            "name": "Skákal pes",
+            "id": "skakal-pes",
+            "url": "game/skakal-pes.json"
+        },
+        {
+            "name": "Maličká su",
+            "id": "malicka-su",
+            "url": "game/malicka-su.json"
+        },
+        {
+            "name": "Óda na radost",
+            "id": "na-radost",
+            "url": "game/na-radost.json"
+        }
+    ]
+}
